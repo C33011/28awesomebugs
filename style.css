@@ -1,0 +1,63 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden; /* Prevents scrollbars due to floating bugs */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.button-tray {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-tray button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-tray button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Bugs Container */
+.bugs-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 60px; /* Account for header height */
+}
+
+.bug {
+    position: absolute;
+    width: 75px;
+    height: auto;
+    border-radius: 50%; /* Optional: round bugs */
+    pointer-events: none; /* Prevent bugs from interfering with clicks */
+}
